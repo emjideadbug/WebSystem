@@ -51,6 +51,65 @@
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navbar a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    /* Hide normal nav */
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+  }
+}
+
 .light-background {
   --background-color: #f9f9f9;
   --surface-color: #ffffff;

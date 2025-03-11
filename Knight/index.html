@@ -103,27 +103,39 @@ padding: 10px 0;">
     justify-content: space-around; /* Evenly distribute menu items */
     width: 100%;">
 
-            <li style="flex-grow: 1; text-align: center;">
-              <a href="#hero" class="active"
-                style="display: block; padding: 15px; color: white; text-decoration: none;">Home</a>
-            </li>
-            <li style="flex-grow: 1; text-align: center;">
-              <a href="#about" style="display: block; padding: 15px; color: white; text-decoration: none;">About</a>
-            </li>
-            <li style="flex-grow: 1; text-align: center;">
-              <a href="#services"
-                style="display: block; padding: 15px; color: white; text-decoration: none;">Services</a>
-            </li>
-            <li style="flex-grow: 1; text-align: center;">
-              <a href="#team" style="display: block; padding: 15px; color: white; text-decoration: none;">Team</a>
-            </li>
-            <li style="flex-grow: 1; text-align: center;">
-              <a href="#faq" style="display: block; padding: 15px; color: white; text-decoration: none;">FAQs</a>
-              <!-- Added FAQs -->
-            </li>
-            <li style="flex-grow: 1; text-align: center;">
-              <a href="#contact" style="display: block; padding: 15px; color: white; text-decoration: none;">Contact</a>
-            </li>
+            <head>
+              <link rel="stylesheet" href="main.css">
+            </head>
+
+            <body>
+              <nav class="navbar">
+                <span class="menu-icon" onclick="toggleMenu()">☰</span>
+                <ul class="desktop-menu">
+                  <li><a href="#hero" class="active">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#team">Team</a></li>
+                  <li><a href="#faq">FAQs</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+
+              <div class="mobile-menu">
+                <a href="#hero" onclick="toggleMenu()">Home</a>
+                <a href="#about" onclick="toggleMenu()">About</a>
+                <a href="#services" onclick="toggleMenu()">Services</a>
+                <a href="#team" onclick="toggleMenu()">Team</a>
+                <a href="#faq" onclick="toggleMenu()">FAQs</a>
+                <a href="#contact" onclick="toggleMenu()">Contact</a>
+              </div>
+
+              <script>
+                function toggleMenu() {
+                  document.querySelector('.mobile-menu').classList.toggle('active');
+                }
+              </script>
+            </body>
+
           </ul>
         </nav>
   </header>
